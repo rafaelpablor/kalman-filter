@@ -13,7 +13,7 @@ def get_stock_data(ticker, start_date, end_date):
 
 def visualize_kalman(ticker, start_date, end_date):
     stock_data = get_stock_data(ticker, start_date, end_date)
-    close_prices = np.array(stock_data["Close"].values)
+    close_prices = np.array(stock_data["Close"].values).flatten()
 
 
     F = np.array([[1, 1], [0, 1]])
